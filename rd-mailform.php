@@ -1,22 +1,18 @@
 <?php
+
+
+$destinatario = 'aldair.cruzbautista@outlook.com';
+
 $nombre = $_POST['nombre'];
-$mail = $_POST['email'];
-$empresa = $_POST['mensaje'];
+$asunto = $_POST['asunto'];
+$mensaje = $_POST['mensaje'];
+$email = $_POST['email'];
 
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+$header = "Enviado desde la página de Aldair Cruz Bautista";
+$mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre;
 
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
+mail($destinatario, $asunto, $mensajeCompleto, $header);
+echo "<script>alert('correo enviado exitosamente')</script>";
+echo "<script>setTimeout(\"location.href='index.html#contact'\",1000)</script>";
 
-$para = 'aldair.cruzbautista@outlook.com';
-$asunto = $_POST['Asunto'];
-
-mail($para, $asunto, utf8_decode($mensaje), $header);
-
-header("Location:index.html#contact");
 ?>
