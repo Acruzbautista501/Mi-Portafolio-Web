@@ -1,7 +1,7 @@
 <?php
 
 
-$destinatario = '';
+$destinatario = 'aldair.cruzbautista@outlook.com';
 
 $nombre = $_POST['nombre'];
 $asunto = $_POST['asunto'];
