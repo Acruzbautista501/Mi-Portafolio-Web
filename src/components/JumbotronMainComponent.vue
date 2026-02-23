@@ -4,13 +4,13 @@
 
 <template>
   <CContainer class="mt-5">
-    <CRow class="g-4">
+    <CRow class="g-2 pt-lg-5 pb-lg-5">
       <CCol xs="12" lg="8">
         <h1 class="display-4 pt-md-5 pb-md-4">
           Hola, soy <span class="fw-bold">Aldair Cruz,</span>
           <span class="text-outline"> Desarrollador</span> 
           <span class="fw-bold"> FrontEnd,</span>
-          Pasante de Ing. en <span class="fw-bold">TIC´s</span>
+          Maquetador <span class="fw-bold">Web</span>
         </h1>
         <p class="fs-4">
           Cuento con conocimiento básico en tecnologías para el desarrollo Front End como lo son HTML 5, CSS3, JavaScript, TypeScript, Angular, Vue, React y Diseño Web Responsivo.
@@ -51,7 +51,7 @@
         </div>
       </CCol>
       <CCol xs="12" lg="4">
-        <div class="pt-md-5">
+        <div class="pt-md-5 pb-md-5">
           <CImage src="/img/aldair-anime.jpeg" class="img-fluid"/>
         </div>
       </CCol>
