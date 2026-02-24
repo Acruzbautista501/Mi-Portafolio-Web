@@ -1,4 +1,4 @@
-import type { Skill } from '../interfaces/Skills';
+import type { Skill } from '../interfaces/Portfolio';
 
 export const db: Skill[] = [
   {
