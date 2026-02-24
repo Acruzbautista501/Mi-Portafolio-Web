@@ -1,75 +1,91 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { db } from '../data/skills';
-import type { Skill } from '../interfaces/Skills';
+import { db } from '../data/experience';
+import type { Experience } from '../interfaces/Portfolio';
 
-const skills = ref<Skill[]>([])
+const experiences = ref<Experience[]>([])
 
 onMounted(() => {
-  skills.value = db
+  experiences.value = db
 })
 </script>
 
 <template>
-  <CContainer class="pt-3 pt-md-4 mb-3 mb-md-4 bg-black">
-    <div class="pt-5 pb-5">
-      <h2 class="display-4 text-center text-white">
-        Mi <span class="fw-bold">Experiencia</span>
-      </h2>
-    </div>
-    <CRow class="g-3 g-lg-5 d-flex justify-content-center pt-5 pb-5">
-      <CContainer>
-        <CCol 
-          xs="12" 
-          v-for="skill in skills"
-          :key="skill.id"
-          class="w-75 mx-auto mb-4"
+  <section class="py-5">
+    <CContainer class="bg-black">
+      <CRow class="pt-5 pb-5">
+        <h2 class="display-4 text-center text-white">
+          Mi <span class="fw-bold">Experiencia</span>
+        </h2>
+      </CRow>
+      <CRow class="g-3 g-lg-5 d-flex justify-content-center pt-5 pb-5">
+        <CCol
+        v-for="experience in experiences"
+        :key="experience.id"
+        xs="12"
+        class="w-90"
         >
-          <div class="skill-card">
-            <font-awesome-icon :icon="skill.icon" class="skill-card-icon" />
-            <span class="fs-4 skill-card-text pt-4">{{ skill.skill }}</span>
-          </div>
+          <CCard class="experience-card border-0">
+            <CCardBody>
+              <div class="d-flex justify-content-between align-items-start flex-wrap">
+                <div>
+                  <h5 class="mb-1 text-white fs-4">
+                    {{ experience.role }} en 
+                    <span class="company">{{ experience.company }}</span>
+                  </h5>
+                  <div class="location mb-2 mb-xl-0">
+                    <font-awesome-icon icon="location-dot" class="fs-6"/>
+                    {{ experience.location }}
+                  </div>
+                </div>
+                <CBadge :color="experience.color || 'dark'" class="period-badge fs-6">
+                  {{ experience.period }}
+                </CBadge>
+              </div>
+              <p class="mt-3 description">
+                {{ experience.description }}
+              </p>
+            </CCardBody>
+          </CCard>
         </CCol>
-      </CContainer>
-
-    </CRow>
-  </CContainer>
+      </CRow>
+    </CContainer>
+  </section>
 </template>
 
 <style scoped>
-.skill-card{
-  height: 250px;
-  border: 2px solid #000;
-  background: #fff;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  transition: all 0.3s ease;
+.w-90{
+  width: 90% !important;
+}
+.experience-card {
+  background: #252525;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+.company {
+  color: #4dabf7;
 }
 
-.skill-card-icon{
-  font-size: 120px;
-  color: #000;
-  transition: all 0.3s ease; /* importante para animación suave */
+.location {
+  color: #7d7d7d;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
 }
 
-.skill-card-text{
-  transition: all 0.3s ease;
+.description {
+  color: #a8a8a8;
+  line-height: 1.6;
 }
 
-/* UN SOLO HOVER */
-.skill-card:hover{
-  border-color: #fff;
-  background: #000;
+.period-badge {
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
-/* El hijo responde al hover del padre */
-.skill-card:hover .skill-card-icon,
-.skill-card:hover .skill-card-text {
-  color: #fff;
-}
-
-</style>
+</style >
