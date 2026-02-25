@@ -3,6 +3,7 @@ import ExperienceComponent from './components/ExperienceComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
 import JumbotronAboutMeComponent from './components/JumbotronAboutMeComponent.vue';
 import JumbotronMainComponent from './components/JumbotronMainComponent.vue';
+import ProjectsComponent from './components/ProjectsComponent.vue';
 import SkillsComponent from './components/SkillsComponent.vue';
 
 
@@ -14,6 +15,7 @@ import SkillsComponent from './components/SkillsComponent.vue';
   <SkillsComponent />
   <ExperienceComponent />
   <JumbotronAboutMeComponent />
+  <ProjectsComponent />
 </template>
 
 <style scoped>
