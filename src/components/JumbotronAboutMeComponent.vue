@@ -19,16 +19,16 @@
           </div>
           <div class="pb-5 fs-5">
             <p class="pb-3">
-              Soy Desarrollador Front End y pasante de 
-              Ingeniería en Tecnologías de la Información y Comunicaciones 
-              del Instituto Tecnológico Superior de Naranjos, 
-              en Naranjos Amatlán, Veracruz. Estoy dispuesto a dar soluciones 
+              Soy <span class="fw-semibold">Desarrollador Front End</span> y pasante de 
+              <span class="fw-semibold">Ingeniería en Tecnologías de la Información y Comunicaciones</span>
+              del <span class="fw-semibold">Instituto Tecnológico Superior de Naranjos, 
+              en Naranjos Amatlán, Veracruz</span>. Estoy dispuesto a dar soluciones 
               a problemas cotidianos con la ayuda de la tecnologías a 
               través de la programación.
             </p>
             <p class="pb-3">
               Cuento con conocimiento básico en tecnologías para el desarrollo Front End 
-              como lo son HTML 5, CSS3, JavaScript, TypeScript, Angular, Vue, React y Diseño Web Responsivo. 
+              como lo son <span class="fw-semibold">HTML 5, CSS3, JavaScript, TypeScript, Angular, Vue, React y Diseño Web Responsivo</span>. 
               Tengo muchas ganas de aprender nuevas habilidades y conocimientos, así también quiero sobresalir 
               como un buen Desarrollador Front End que sea reconocido en el medio.
             </p>
@@ -38,7 +38,3 @@
     </CContainer>
   </section>
 </template>
-
-<style scoped>
-
-</style>
