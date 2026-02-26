@@ -75,36 +75,39 @@ const breakpointKey = computed(() => {
               lg="4"
               class="mb-4"
             >
-              <CCard class="h-100 shadow-sm project-card border border-2 border-black rounded-0">
+              <CCard class="project-card h-100">
+
+                <!-- Imagen -->
                 <CCardImage
                   :src="project.image"
-                  class="project-img rounded-0 border-bottom border-black border-2"
+                  class="project-img"
                 />
 
-                <CCardBody>
-                  <h5 class="fw-bold mb-2">
+                <!-- Contenido -->
+                <CCardBody class="project-body">
+                  <h5 class="project-title">
                     {{ project.title }}
                   </h5>
 
-                  <p class=" text-body-secondary small">
+                  <p class="project-description">
                     {{ project.description }}
                   </p>
 
-                  <div class="mt-3">
-                    <CBadge
+                  <!-- Tags -->
+                  <div class="project-tags">
+                    <span
                       v-for="tech in project.technologies"
                       :key="tech"
-                      color="dark"
-                      class="me-2"
+                      class="project-tag"
                     >
                       {{ tech }}
-                    </CBadge>
+                    </span>
                   </div>
                 </CCardBody>
                 <div class="d-flex justify-content-between align-content-between pt-4">
                   <p class="ms-3">asfasfadsf</p>
                   <p class="me-3">dvgsdfagfdsagsfd</p>
-                </div>
+                </div>                
               </CCard>
             </CCol>
           </CRow>
@@ -115,19 +118,73 @@ const breakpointKey = computed(() => {
 </template>
 
 <style scoped>
+/* CARD GENERAL */
 .project-card {
-  border: none;
-  transition: all 0.25s ease;
+  background: #f4f4f4;
+  border: 2px solid #1a1a1a;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform .25s ease;
 }
 
+/* Hover sutil (como portafolio real) */
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  transform: translateY(6px);
 }
 
+
+/* IMAGEN */
 .project-img {
-  height: 200px;
+  width: 100%;
+  height: 210px;
   object-fit: cover;
+  border-radius: 0;
+  border-bottom: 2px solid #1a1a1a;
+  border-left: 0px !important;
+}
+
+
+/* BODY */
+.project-body {
+  padding: 1.6rem;
+}
+
+
+/* TITULO */
+.project-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: .6rem;
+  color: #111;
+}
+
+
+/* DESCRIPCIÓN */
+.project-description {
+  font-size: .9rem;
+  color: #6b6b6b;
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+}
+
+
+/* TAGS */
+.project-tags {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+
+/* TAG INDIVIDUAL */
+.project-tag {
+  background: #111;
+  color: #fff;
+  font-size: .65rem;
+  padding: .35rem .55rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid #111;
 }
 
 :deep(.carousel) {
