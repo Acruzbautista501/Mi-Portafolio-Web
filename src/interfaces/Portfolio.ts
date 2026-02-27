@@ -22,4 +22,5 @@ export interface Project {
   image: string
   technologies: string[]
   link: string
+  github: string
 }

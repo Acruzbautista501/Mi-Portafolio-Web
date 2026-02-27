@@ -54,14 +54,14 @@ const breakpointKey = computed(() => {
 </script>
 
 <template>
-  <section class="py-5">
+  <section class="py-5 bg-body-tertiary">
     <CContainer>
       <CRow class="pt-5 pb-5">
         <h2 class="display-4 text-center">
           Mis <span class="fw-bold">Proyectos</span>
         </h2>
       </CRow>
-      <CCarousel controls indicators dark :interval="false" :key="breakpointKey">
+      <CCarousel controls indicators dark :key="breakpointKey" transition="crossfade">
         <CCarouselItem
           v-for="(group, index) in slides"
           :key="index"
@@ -105,8 +105,18 @@ const breakpointKey = computed(() => {
                   </div>
                 </CCardBody>
                 <div class="d-flex justify-content-between align-content-between pt-4">
-                  <p class="ms-3">asfasfadsf</p>
-                  <p class="me-3">dvgsdfagfdsagsfd</p>
+                  <p class="ms-3 text-info">
+                    <font-awesome-icon icon="link" class="fs-6" />
+                    <a :href="project.link" target="_blank" class="text-decoration-none text-info">
+                      Visitar Sitio
+                    </a>
+                  </p>
+                  <p class="me-3 text-secondary">
+                    <font-awesome-icon :icon="['fab', 'github']" class="fs-6" />
+                    <a :href="project.github" target="_blank" class="text-decoration-none text-secondary">
+                      Ver Código
+                    </a>
+                  </p>
                 </div>                
               </CCard>
             </CCol>
@@ -120,7 +130,7 @@ const breakpointKey = computed(() => {
 <style scoped>
 /* CARD GENERAL */
 .project-card {
-  background: #f4f4f4;
+  background: #f4f4f4 !important;
   border: 2px solid #1a1a1a;
   border-radius: 0;
   overflow: hidden;

@@ -13,7 +13,7 @@ import {
   faCss,
   faHtml5, 
 } from "@fortawesome/free-brands-svg-icons";
-import { faTerminal, faFileInvoice, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faTerminal, faFileInvoice, faLocationDot, faLink } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faTerminal,
@@ -31,4 +31,5 @@ library.add(
   faAngular,
   faCss,
   faLocationDot,
+  faLink,
 )
