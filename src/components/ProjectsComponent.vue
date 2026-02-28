@@ -54,7 +54,7 @@ const breakpointKey = computed(() => {
 </script>
 
 <template>
-  <section class="py-5 bg-body-tertiary">
+  <section class="py-5 bg-body-tertiary" id="projects">
     <CContainer>
       <CRow class="pt-5 pb-5">
         <h2 class="display-4 text-center">

@@ -42,7 +42,7 @@ const sendEmail = async () => {
 </script>
 
 <template>
-	<section class="py-5">
+	<section class="py-5" id="contact">
 		<CContainer>
 			<CRow class="g-3 g-lg-5">
 				<CCol xs="12" lg="6">

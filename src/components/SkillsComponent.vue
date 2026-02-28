@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="py-5">
+  <section class="py-5" id="tech">
     <CContainer>
       <div class="pt-3 pb-5">
         <h2 class="display-4 text-center">

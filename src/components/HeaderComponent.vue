@@ -20,21 +20,30 @@
 
       <CHeaderNav class="col-12 col-lg-auto mb-2 justify-content-center mb-lg-0">
         <CNavItem>
-          <CNavLink href="#" active>Acerca de Mi</CNavLink>
+          <CNavLink href="#tech">Tecnologías</CNavLink>
         </CNavItem>
         <CNavItem>
-          <CNavLink href="#">Habilidades</CNavLink>
+          <CNavLink href="#exp">Experiencia</CNavLink>
         </CNavItem>
         <CNavItem>
-          <CNavLink href="#">Proyectos</CNavLink>
+          <CNavLink href="#about-Me">Acerca de Mi</CNavLink>
         </CNavItem>
         <CNavItem>
-          <CNavLink href="#">Contacto</CNavLink>
+          <CNavLink href="#projects">Proyectos</CNavLink>
+        </CNavItem>
+        <CNavItem>
+          <CNavLink href="#contact">Contacto</CNavLink>
         </CNavItem>
       </CHeaderNav>
       <div class="col-lg-3 text-end">
-        <CButton color="dark">
-          <font-awesome-icon icon="file-invoice" class="text-white"/> Descargar CV
+        <CButton
+          color="dark"
+          component="a"
+          href="/files/Aldair_Cruz_Bautista_CV.pdf"
+          download="Aldair_Cruz_Bautista_CV.pdf"
+        >
+          <font-awesome-icon icon="file-invoice" class="text-white"/>
+          Descargar CV
         </CButton>
       </div>
     </CContainer>

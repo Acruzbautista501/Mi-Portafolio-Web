@@ -17,7 +17,9 @@ import SkillsComponent from './components/SkillsComponent.vue';
   <SkillsComponent />
   <ExperienceComponent />
   <JumbotronAboutMeComponent />
-  <ProjectsComponent />
+  <main>
+    <ProjectsComponent />
+  </main>
   <ContactComponent />
   <FooterComponent />
 </template>
