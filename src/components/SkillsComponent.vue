@@ -20,7 +20,7 @@ onMounted(() => {
       </div>
       <CRow class="g-3 g-lg-5 d-flex justify-content-center pt-3 pb-5">
         <CCol 
-          xs="12" 
+          xs="6" 
           md="6" 
           lg="4"
           xl="3" 

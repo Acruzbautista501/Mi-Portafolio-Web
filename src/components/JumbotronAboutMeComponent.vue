@@ -12,25 +12,28 @@
           </div>
         </CCol>
         <CCol xs="12" lg="6">
-          <div class="pt-5 pb-5">
+          <div class="pt-5 pb-3">
             <h2 class="display-4 text-center">
               Acerca de <span class="fw-bold">de mi</span>
             </h2>
           </div>
           <div class="pb-5 fs-5">
-            <p class="pb-3">
-              Soy <span class="fw-semibold">Desarrollador Front End</span> y pasante de 
+            <p class="pb-1">
+              Soy <span class="fw-semibold">Desarrollador Front End</span> e Ingeniero en 
               <span class="fw-semibold">Ingeniería en Tecnologías de la Información y Comunicaciones</span>
               del <span class="fw-semibold">Instituto Tecnológico Superior de Naranjos, 
-              en Naranjos Amatlán, Veracruz</span>. Estoy dispuesto a dar soluciones 
-              a problemas cotidianos con la ayuda de la tecnologías a 
-              través de la programación.
+              en Naranjos Amatlán, Veracruz</span>. Me especializo en la creación de interfaces web modernas, 
+              intuitivas y responsivas, cuidando tanto la experiencia del usuario como la estructura y organización del código.
             </p>
-            <p class="pb-3">
-              Cuento con conocimiento básico en tecnologías para el desarrollo Front End 
-              como lo son <span class="fw-semibold">HTML 5, CSS3, JavaScript, TypeScript, Angular, Vue, React y Diseño Web Responsivo</span>. 
-              Tengo muchas ganas de aprender nuevas habilidades y conocimientos, así también quiero sobresalir 
-              como un buen Desarrollador Front End que sea reconocido en el medio.
+            <p class="pb-1">
+              Me motiva transformar ideas en soluciones digitales funcionales mediante la programación, aplicando 
+              buenas prácticas, optimización y atención al detalle en cada proyecto. Disfruto trabajar en entornos 
+              donde pueda resolver problemas, aprender nuevas tecnologías y enfrentar retos que impulsen mi crecimiento 
+              profesional.
+            </p>
+            <p class="pb-1">
+              Actualmente continúo fortaleciendo mis habilidades técnicas y mi capacidad de adaptación, con el objetivo 
+              de consolidarme como un desarrollador comprometido, creativo y orientado a resultados dentro del desarrollo web.
             </p>
           </div>
         </CCol> 

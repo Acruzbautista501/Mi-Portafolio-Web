@@ -14,7 +14,7 @@
             Maquetador <span class="fw-bold">Web</span>
           </h1>
           <p class="fs-4">
-            Cuento con conocimiento básico en tecnologías para el desarrollo Front End como lo son HTML 5, CSS3, JavaScript, TypeScript, Angular, Vue, React y Diseño Web Responsivo.
+            Desarrollo interfaces web modernas, funcionales y responsivas utilizando tecnologías como HTML5, CSS3, JavaScript y TypeScript, junto con frameworks como Angular, Vue y React. Me enfoco en crear experiencias dinámicas, optimizadas y centradas en el usuario.
           </p>
           <div class="d-flex pt-5">
             <CButton 
