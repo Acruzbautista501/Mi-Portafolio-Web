@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 const form = ref({
   from_name: '',
@@ -24,17 +25,32 @@ const sendEmail = async () => {
       'TriiPr4PoUj5brjcS'
     )
 
-    alert('Mensaje enviado correctamente 🚀')
+    await Swal.fire({
+      icon: 'success',
+      title: 'Mensaje enviado',
+      text: 'Gracias por contactarme. Te responderé pronto.',
+      confirmButtonColor: '#000',
+      confirmButtonText: 'Aceptar'
+    })
 
+    // Limpiar formulario
     form.value = {
       from_name: '',
       reply_to: '',
       subject: '',
       message: ''
     }
+
   } catch (err) {
     console.error(err)
-    alert('Error al enviar el mensaje')
+
+    Swal.fire({
+      icon: 'error',
+      title: 'Error al enviar',
+      text: 'Ocurrió un problema. Intenta nuevamente.',
+      confirmButtonColor: '#000',
+      confirmButtonText: 'Cerrar'
+    })
   }
 
   loading.value = false
@@ -99,7 +115,7 @@ const sendEmail = async () => {
 					</CForm>
 				</CCol>
 				<CCol xs="12" lg="6">
-					<div class="py-0 py-md-1 py-lg-3">
+					<div class="py-0 py-md-1">
           <h3 class="display-4 pt-md-5 pb-md-3 fw-bold">
             Hablemos de algo
             <span class="text-outline"> especial</span> 
@@ -117,7 +133,41 @@ const sendEmail = async () => {
 							<a href="tel:+527681080365" class="text-decoration-none text-black">
 								(+52) 768 1080365
 							</a>
-						</p>						
+						</p>
+          <div class="d-flex pt-4">
+            <CButton 
+              class="icon-social me-2" 
+              href="https://www.facebook.com/aldair.cruzbautista" 
+              target="_blank"
+              v-c-tooltip="{content: 'Mi Facebook', placement: 'top'}"
+            >
+              <font-awesome-icon :icon="['fab', 'facebook']" size="lg" class="icon-social-svg"/>
+            </CButton>
+            <CButton 
+              class="icon-social mx-2" 
+              href="https://www.linkedin.com/in/aldair-cruz-bautista" 
+              target="_blank"
+              v-c-tooltip="{content: 'Mi LinkedIn', placement: 'top'}"
+            >
+              <font-awesome-icon :icon="['fab', 'linkedin-in']" size="lg" class="icon-social-svg"/>
+            </CButton>
+            <CButton 
+              class="icon-social mx-2" 
+              href="https://github.com/Acruzbautista501" 
+              target="_blank"
+              v-c-tooltip="{content: 'Mi Github', placement: 'top'}"
+            >
+              <font-awesome-icon :icon="['fab', 'github']" size="lg" class="icon-social-svg"/>
+            </CButton>
+            <CButton 
+              class="icon-social mx-2" 
+              href="http://api.whatsapp.com/send?phone=527681080365" 
+              target="_blank"
+              v-c-tooltip="{content: 'Mi WhatsApp', placement: 'top'}"
+            >
+              <font-awesome-icon :icon="['fab', 'whatsapp']" size="lg" class="icon-social-svg"/>
+            </CButton>
+          </div>												
 					</div>
 					</div>	
 				</CCol>	
@@ -144,5 +194,36 @@ const sendEmail = async () => {
      2px  0px 0 black,
      0px -2px 0 black,
      0px  2px 0 black;
+}
+
+.icon-social {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  background: #fff;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.icon-social-svg {
+  font-size: 25px;
+  color: #000;
+  transition: all 0.3s ease; /* importante para animación suave */
+}
+
+/* UN SOLO HOVER */
+.icon-social:hover {
+  border-color: #fff;
+  background: #000;
+}
+
+/* El hijo responde al hover del padre */
+.icon-social:hover .icon-social-svg {
+  color: #fff;
 }
 </style>
